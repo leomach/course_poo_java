@@ -86,6 +86,13 @@ public class Program {
 		double avg = sum / vect.length;
 		System.out.printf("Average price = %.2f%n", avg);
 		
+		// ------------------------------------------
+		
+		String[] vector = new String[] {"Maria", "Bob", "Alex"};
+		for (String obj : vector) {
+			System.out.println(obj);
+		}
+		
 		sc.close();
 	}
 
