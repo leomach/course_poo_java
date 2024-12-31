@@ -1,10 +1,13 @@
 package application;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
-import entities.Triangle;
 import entities.Product;
+import entities.Triangle;
 
 public class Program {
 
@@ -91,6 +94,33 @@ public class Program {
 		String[] vector = new String[] {"Maria", "Bob", "Alex"};
 		for (String obj : vector) {
 			System.out.println(obj);
+		}
+		
+		// -----------------------------------------
+		
+		List<String> list = new ArrayList<>();
+		
+		list.add("Maria");
+		list.add("Bob");
+		list.add("Alex");
+		list.add("Anna");
+		list.add(2, "Marco");
+		
+		list.size();
+		
+		list.remove(2);
+		list.remove("Bob");
+		list.removeIf(i -> i.charAt(0) == 'M');
+		
+		list.indexOf("Anna");
+		
+		List<String> result = list.stream().filter(i -> i.charAt(0) == 'A').collect(Collectors.toList());
+		for (String i : result) {
+			System.out.println(i);
+		}
+		
+		for (String i : list) {
+			System.out.println(i);
 		}
 		
 		sc.close();
